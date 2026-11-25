@@ -1,0 +1,365 @@
+/* ================= FONT LOKAL ================= */
+@font-face {
+    font-family: 'Dutch801 Rm BT';
+    src: url('Dutch 801 Roman BT.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ================= RESET & VARIABEL ================= */
+:root {
+    --dark-brown: #3b2316;
+    --bg-pink-cream: #f2e6e6; 
+    --text-dark: #222;
+    --text-light: #fff;
+    --border-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-pink-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVBAR (DISAMAKAN DENGAN BERANDA) ================= */
+.navbar {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    height: 80px;
+    gap: 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    object-fit: contain;
+}
+
+.nav-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif !important; 
+    font-size: 2rem; 
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.nav-menu {
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-menu:hover {
+    color: #d4a373;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.search-bar {
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search-bar i {
+    color: #333;
+    font-size: 1.1rem;
+    cursor: pointer;
+    order: -1;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    padding: 10px 35px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.nav-right a {
+    color: #000000;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a:hover {
+    color: #d4a373;
+}
+
+/* ================= LAYOUT UTAMA (SIDEBAR & KONTEN) ================= */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- KONTEN KANAN --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #3b2316;
+    color: #ffffff;
+    padding: 15px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons a .fa-facebook {
+    background-color: #1877F2;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.social-icons a .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.app-info {
+    max-width: 250px;
+    text-align: right;
+}
+
+.app-info h4 {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.discount-text {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.qr-code {
+    width: 60px !important; 
+    height: 60px !important;
+    background-color: white;
+    padding: 3px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* ================= TAMBAHAN KHUSUS HALAMAN PESAN ================= */
+/* Bagian ini ditambahkan agar kotak pesan rapi, tanpa mengubah settingan di atas */
+
+.breadcrumb {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.message-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    justify-content: space-between;
+}
+
+.message-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: justify;
+}
+
+.message-content p {
+    margin-bottom: 15px;
+}
+
+.message-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-left, .nav-center, .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    .app-info {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .message-card {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .message-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,472 @@
+/* halaman_keranjang.css */
+/* ================= FONT LOKAL ================= */
+@font-face {
+    font-family: 'Dutch801 Rm BT';
+    src: url('Dutch 801 Roman BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ================= RESET & VARIABEL ================= */
+:root {
+    --dark-brown: #3b2316;
+    --brown-bg: #4a2c1d;
+    --light-cream: #f9f6f0;
+    --bg-pink-cream: #F2E6E6;
+    --text-dark: #222;
+    --text-light: #fff;
+    --gray-border: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVBAR (Sesuai Beranda) ================= */
+.navbar {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    height: 80px;
+    gap: 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    object-fit: contain;
+}
+
+.nav-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif !important; 
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.search-bar {
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search-bar i {
+    color: #333;
+    font-size: 1.1rem;
+    cursor: pointer;
+    order: -1;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    padding: 10px 35px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.nav-right a {
+    color: #000000;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a:hover {
+    color: #d4a373;
+}
+
+/* ================= MAIN CONTENT (KERANJANG) ================= */
+main {
+    flex: 1;
+    padding: 40px 80px;
+    position: relative;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cart-title {
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.delete-link {
+    color: var(--dark-brown);
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Item Card Styles */
+.cart-item-card {
+    background-color: var(--bg-pink-cream);
+    border: 1px solid var(--dark-brown);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-checkbox {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--dark-brown);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.item-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--dark-brown);
+    margin-bottom: 15px;
+}
+
+.item-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 80%;
+    color: var(--text-dark);
+}
+
+/* Item Bottom: Link & Price */
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.detail-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.detail-link::before {
+    content: "<<<<";
+}
+
+.detail-link::after {
+    content: ">>>>";
+}
+
+.detail-link:hover {
+    color: var(--dark-brown);
+}
+
+.item-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-left: auto;
+}
+
+/* Buy Now Button */
+.buy-now-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-buy {
+    background-color: var(--dark-brown);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-buy:hover {
+    background-color: #2a180f;
+}
+
+/* ================= FOOTER (Sesuai Beranda) ================= */
+footer {
+    background-color: #3b2316;
+    color: #ffffff;
+    padding: 15px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons a .fa-facebook {
+    background-color: #1877F2;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.social-icons a .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.app-info {
+    max-width: 250px;
+    text-align: right;
+}
+
+.app-info h4 {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+.discount-text {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.qr-code {
+    width: 60px !important; 
+    height: 60px !important;
+    background-color: white;
+    padding: 3px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-left, .nav-center, .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+    
+    .cart-item-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .item-left {
+        flex-direction: column;
+    }
+    
+    .item-desc {
+        max-width: 100%;
+    }
+    
+    .item-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .detail-link {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    
+    .item-price {
+        margin-left: 0;
+    }
+    
+    .buy-now-container {
+        justify-content: center;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    .app-info {
+        max-width: 100%;
+        text-align: left;
+    }
+}

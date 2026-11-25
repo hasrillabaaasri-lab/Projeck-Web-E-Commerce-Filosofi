@@ -1,0 +1,371 @@
+/* ================= RESET & VARIABEL ================= */
+@font-face {
+    font-family: 'Dutch801 Rm BT';
+    src: url('Dutch 801 Roman BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --dark-brown: #3b2316;
+    --bg-pink: #ebdcd5; 
+    --text-dark: #111;
+    --text-light: #fff;
+    --border-color: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-pink);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= TOP NAVBAR ================= */
+.top-navbar {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.nav-brand {
+    font-family: 'Dutch801 Rm BT', 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.nav-separator {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 5px;
+}
+
+.nav-page {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-page.active {
+    font-weight: 600;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.main-container {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ================= FORM STYLING ================= */
+.address-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Input Teks Biasa (Kapsul) */
+.input-pill {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Textarea (Kotak Besar) */
+.input-area {
+    width: 100%;
+    height: 180px;
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    transition: 0.3s;
+}
+
+.input-pill:focus, .input-area:focus {
+    border-color: #999;
+}
+
+/* ================= MAP CONTAINER ================= */
+.map-container {
+    width: 100%;
+    height: 350px; /* Tinggi peta sesuai gambar */
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ================= TOMBOL LOKASI ================= */
+.location-btn-wrapper {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-location {
+    background-color: var(--dark-brown);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Bentuk kapsul */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-location:hover {
+    background-color: #2a180f;
+}
+
+.btn-location i {
+    font-size: 18px;
+}
+
+/* ================= TOMBOL SIMPAN ================= */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Posisi kanan */
+    margin-top: 10px;
+}
+
+.btn-simpan {
+    background-color: var(--dark-brown);
+    color: #ffffff;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-simpan:hover {
+    background-color: #2a180f;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: var(--dark-brown);
+    color: #ffffff;
+    padding: 30px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    flex: 1;
+}
+
+.footer-logo-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    gap: 50px; 
+    align-items: flex-start; 
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+
+.social-icons a.fb { background-color: #1877F2; }
+.social-icons a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.app-col {
+    align-items: center;
+    text-align: center;
+}
+
+.app-col h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.discount-text {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.qr-code {
+    width: 65px !important; 
+    height: 65px !important;
+    background-color: white;
+    padding: 3px;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .top-navbar {
+        padding: 15px 20px;
+    }
+    
+    .main-container {
+        padding: 20px;
+    }
+
+    .map-container {
+        height: 250px; /* Peta lebih pendek di HP */
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+    
+    .btn-simpan {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-left {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}

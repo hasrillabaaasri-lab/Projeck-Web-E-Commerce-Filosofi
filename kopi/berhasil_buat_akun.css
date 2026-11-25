@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #2c1a11;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   HEADER NAVBAR (DISAMAKAN DENGAN DAFTAR)
+   ========================================= */
+.header {
+    background-color: #3b2316;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.brand-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.separator {
+    font-size: 12px;
+    color: #a0a0a0;
+    margin: 0 2px;
+}
+
+.page-title {
+    font-size: 13px;
+    color: #d0d0d0;
+}
+
+/* =========================================
+   MAIN BODY AREA
+   ========================================= */
+.main-container {
+    background-color: #e5d3cb; /* Krem Merah Muda */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+/* Card Berhasil */
+.card-success {
+    background-color: #2e1a0e;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    padding: 48px 40px 48px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Checkmark Icon Putih Bulat */
+.check-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.check-icon {
+    width: 44px;
+    height: 44px;
+    fill: #2e1a0e;
+}
+
+/* Pesan Sukses */
+.success-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 32px;
+    max-width: 380px;
+}
+
+/* Button Kembali Ke Halaman Login */
+.action-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-login {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #2e1a0e;
+    text-decoration: none;
+    padding: 8px 36px;
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login:hover {
+    background-color: #f2f2f2;
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   FOOTER SECTION (SAMA PERSIS DENGAN LOGIN)
+   ========================================= */
+footer {
+    background-color: #3b2316;
+    color: #ffffff;
+    padding: 20px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    flex: 1;
+}
+
+.footer-logo-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-brand {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px; 
+    align-items: flex-start; 
+}
+
+.footer-top-row {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-col h4, .app-info h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+}
+
+.social-icons a.fb { background-color: #1877F2; }
+.social-icons a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-text {
+    font-size: 10px;
+    margin: 3px 0;
+}
+
+.qr-code {
+    width: 50px !important; 
+    height: 50px !important;
+    background-color: white;
+    padding: 2px;
+    object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIF MOBILE
+   ========================================= */
+@media (max-width: 520px) {
+    .card-success {
+        padding: 32px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-left {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,486 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #dfd5ce;
+    color: #1f140e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   HEADER ATAS
+   ========================================= */
+.top-header {
+    background-color: #2b170e;
+    color: #ffffff;
+    padding: 14px 48px;
+    display: flex;
+    align-items: center;
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* =========================================
+   KONTAINER UTAMA & PETA
+   ========================================= */
+.tracking-container {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 28px 24px 64px;
+    flex: 1;
+}
+
+.map-wrapper {
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #e9ecef;
+}
+
+.delivery-map {
+    width: 100%;
+    height: 360px;
+    z-index: 1;
+}
+
+/* Pin Marker Peta Kustom */
+.custom-map-pin {
+    background: transparent;
+    border: none;
+}
+
+.pin-store {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #16a34a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.pin-courier {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #111827;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.pin-dest {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dc2626;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   INFO KURIR GOJEK
+   ========================================= */
+.courier-header-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.gojek-badge-box {
+    width: 78px;
+    height: 78px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
+}
+
+.gojek-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid #00aa13;
+    border-bottom-color: transparent;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gojek-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #00aa13;
+}
+
+.gojek-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1c1917;
+    line-height: 1;
+    letter-spacing: -0.3px;
+}
+
+.courier-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+.service-estimate {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f140e;
+    max-width: 260px;
+    line-height: 1.35;
+}
+
+.driver-plate-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.driver-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #bcaaa4;
+    background-color: #2b170e;
+}
+
+.plate-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f140e;
+    letter-spacing: 0.3px;
+}
+
+/* =========================================
+   VERTICAL TIMELINE STATUS PENGIRIMAN
+   ========================================= */
+.timeline-section {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 76px 36px 1fr;
+    align-items: stretch;
+    min-height: 68px;
+}
+
+.timeline-item.is-last {
+    min-height: auto;
+}
+
+.timeline-time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b3f39;
+    padding-top: 3px;
+    text-align: left;
+}
+
+.timeline-marker-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.marker-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.marker-dot.is-done {
+    background-color: #22b14c;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.marker-dot.is-current {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    background-color: #000000;
+}
+
+.timeline-line {
+    width: 2px;
+    flex: 1;
+    background-color: #b7a89e;
+    min-height: 42px;
+}
+
+.timeline-content {
+    padding-left: 8px;
+    padding-bottom: 24px;
+}
+
+.timeline-item.is-last .timeline-content {
+    padding-bottom: 0;
+}
+
+.step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f140e;
+    line-height: 1.35;
+}
+
+.step-desc {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #3a2e28;
+    margin-top: 2px;
+    line-height: 1.45;
+}
+
+.courier-detail-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: 1.5px solid #6d5d54;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.28);
+    font-size: 13px;
+    font-weight: 500;
+    color: #1f140e;
+    line-height: 1.55;
+}
+
+/* =========================================
+   FOOTER FILOSOFI KOPI
+   ========================================= */
+.site-footer {
+    background-color: #2b170e;
+    color: #ffffff;
+    padding: 42px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo-circle {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-brand {
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 420px;
+}
+
+.footer-top-row {
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.08);
+}
+
+.social-btn.fb {
+    background-color: #1877f2;
+}
+
+.social-btn.ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.app-promo h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.discount-note {
+    font-size: 12.5px;
+    color: #e5dcd6;
+    margin-bottom: 12px;
+}
+
+.footer-qr {
+    width: 112px;
+    height: 112px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+    display: block;
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+    .top-header {
+        padding: 12px 20px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .tracking-container {
+        padding: 18px 14px 42px;
+    }
+
+    .delivery-map {
+        height: 250px;
+    }
+
+    .courier-header-section {
+        gap: 14px;
+    }
+
+    .gojek-badge-box {
+        width: 68px;
+        height: 68px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 68px 30px 1fr;
+    }
+
+    .timeline-time {
+        font-size: 11.5px;
+    }
+
+    .site-footer {
+        padding: 32px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        font-size: 23px;
+    }
+}

@@ -1,0 +1,330 @@
+/* ================= RESET & GENERAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ebdcd5;
+    color: #333; /* Warna teks dasar diubah jadi gelap */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.top-header {
+    background-color: #2b170e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.brand-title {
+    font-family: 'Dutch801 Rm BT', 'Playfair Display', 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.user-badge-header {
+    background-color: #ffffff;
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.main-container {
+    background-color: #ebdcd5;
+    padding: 20px 30px;
+    flex: 1;
+}
+
+/* CONTROL CARD (TOP BANNER) */
+.control-card {
+    background-color: #2b170e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.title-section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.title-section p {
+    font-size: 11px;
+    color: #ccc;
+}
+
+.btn-add {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #27ae60;
+}
+
+.search-section {
+    width: 100%;
+}
+
+.search-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box i {
+    color: #888;
+    font-size: 13px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    color: #333;
+}
+
+/* TABLE CARD & ORDER TABLE */
+.table-card {
+    background-color: #2b170e;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.order-table thead {
+    background-color: #2b170e;
+    color: #fff;
+}
+
+.order-table th {
+    padding: 12px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    border-right: 1px solid #3b2319;
+}
+
+.order-table th:last-child {
+    border-right: none;
+}
+
+.order-table td {
+    padding: 15px;
+    font-size: 11px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.col-customer {
+    text-align: left;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    font-size: 16px;
+    color: #2b170e;
+}
+
+.col-items {
+    text-align: center;
+    color: #555;
+    line-height: 1.4;
+}
+
+.col-center {
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* ================= FOOTER SECTION ================= */
+footer {
+    background-color: #3b2316;
+    color: #ffffff;
+    padding: 20px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    flex: 1;
+}
+
+.footer-logo-circle {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.footer-logo-circle img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+.footer-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif;
+    font-size: 32px !important;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px; 
+    align-items: flex-start; 
+}
+
+.footer-top-row {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-col h4, .app-info h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+}
+
+.social-icons a.fb { background-color: #1877F2; }
+.social-icons a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-text {
+    font-size: 10px;
+    margin: 3px 0;
+}
+
+.qr-code {
+    width: 50px !important; 
+    height: 50px !important;
+    background-color: white;
+    padding: 2px;
+    object-fit: contain;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    .footer-left {
+        justify-content: center;
+    }
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,311 @@
+/* ================= RESET & VARIABEL ================= */
+@font-face {
+    font-family: 'Dutch801 Rm BT';
+    src: url('Dutch 801 Roman BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --dark-brown: #3b2316;
+    --bg-pink: #ebdcd5;
+    --text-dark: #111;
+    --text-light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-pink);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= TOP NAVBAR ================= */
+.top-navbar {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.nav-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.main-container {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+/* ================= QRIS BOX ================= */
+.qr-wrapper {
+    background-color: #ffffff;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 20px;
+}
+
+.qr-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #e52e2e;
+    border-left: 5px solid #e52e2e;
+    border-top-left-radius: 5px;
+}
+
+.qr-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #e52e2e;
+    border-right: 5px solid #e52e2e;
+    border-bottom-right-radius: 5px;
+}
+
+.qr-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ================= TIMER ================= */
+.timer-text {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+}
+
+/* ================= INSTRUCTIONS ================= */
+.instructions {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    max-width: 900px;
+}
+
+.instructions ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.instructions ol li {
+    margin-bottom: 15px;
+}
+
+.instructions strong {
+    font-weight: 600;
+}
+
+/* ================= FOOTER (DIPERBAIKI KE HORIZONTAL) ================= */
+footer {
+    background-color: var(--dark-brown);
+    color: #ffffff;
+    padding: 30px 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer-logo-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-brand {
+    font-family: 'Dutch801 Rm BT', 'Times New Roman', serif;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Area Kanan: Berjejer ke Samping */
+.footer-right {
+    display: flex;
+    flex-direction: row; /* Kunci agar menyamping */
+    gap: 50px; /* Jarak antar 3 kolom */
+    align-items: flex-start; 
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Teks di tengah kolom */
+    gap: 8px;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Ikon Sosmed */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+
+.social-icons a.fb { background-color: #1877F2; }
+.social-icons a.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+/* Info Aplikasi & QR */
+.app-info h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.discount-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.qr-code {
+    width: 65px !important; 
+    height: 65px !important;
+    background-color: white;
+    padding: 3px;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .top-navbar {
+        padding: 15px 20px;
+    }
+    
+    .main-container {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .qr-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .timer-text {
+        font-size: 28px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-left {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Responsive untuk HP: Kolom Kanan Jadi Tumpuk ke Bawah */
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,157 @@
+/* ================= STYLE KHUSUS KONTEN KATEGORI ================= */
+
+/* BANNER COKLAT */
+.control-card {
+    background-color: #3b2316;
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.title-section h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.title-section p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.btn-add {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-add:hover {
+    background-color: #00b248;
+}
+
+.search-section {
+    width: 100%;
+}
+
+.search-box {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box i {
+    color: #888;
+    font-size: 16px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+/* TABEL PRODUK */
+.table-wrapper {
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #b0b0b0;
+}
+
+.custom-table th, 
+.custom-table td {
+    border: 1px solid #b0b0b0;
+}
+
+.custom-table thead {
+    background-color: #3b2316;
+    color: #e0e0e0;
+}
+
+.custom-table th {
+    padding: 15px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.col-foto { width: 8%; text-align: center !important; }
+.col-nama { width: 15%; }
+.col-desc { width: 32%; }
+.col-kategori { width: 13%; }
+.col-stock { width: 8%; text-align: center !important; }
+.col-harga { width: 12%; }
+.col-edit { width: 12%; text-align: center !important; }
+
+.custom-table td {
+    padding: 15px 10px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.td-foto { text-align: center; }
+.img-produk {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.td-nama { color: #666; }
+.td-desc { font-size: 13px; color: #444; line-height: 1.5; }
+.td-kategori { text-align: left; }
+.td-stock { text-align: center; }
+.td-harga { text-align: left; }
+.td-edit { text-align: center; }
+
+.action-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: 1px solid #b0b0b0;
+    padding: 6px 10px;
+    gap: 12px;
+}
+
+.action-box a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-edit { color: #1565c0; }
+.btn-delete { color: #d32f2f; }
+
+/* Responsive Tabel */
+@media (max-width: 768px) {
+    .control-header { flex-direction: column; gap: 15px; }
+}
